@@ -1,0 +1,19 @@
+{
+  "name": "BankerBot",
+  "version": "0.0.0",
+  "description": "BankerBot",
+  "main": "app.js",
+  "author": {
+    "name": "Lalo Serna",
+    "email": ""
+  },
+  "dependencies": {
+    "async": "^1.2.1",
+    "mongodb": "^2.0.35",
+    "node-rest-client": "^1.5.1",
+    "nodetime": "^0.8.15",
+    "q": "^1.4.1",
+    "request": "^2.58.0",
+    "socket.io": "^1.3.5"
+  }
+}
