@@ -1,15 +1,11 @@
 {
-  "name": "BankerBot",
-  "version": "0.0.0",
+  "name": "bankerbot",
+  "version": "1.0.0",
   "description": "BankerBot",
-  "main": "app.js",
-  "author": {
-    "name": "Lalo Serna",
-    "email": ""
-  },
   "main": "messageManager.js",
- "scripts": {
-   "start": "node messageManager.js"
+  "author": "Lalo Serna",
+  "scripts": {
+    "start": "node messageManager.js"
   },
   "dependencies": {
     "async": "^1.2.1",
@@ -18,6 +14,17 @@
     "nodetime": "^0.8.15",
     "q": "^1.4.1",
     "request": "^2.58.0",
-    "socket.io": "^1.3.5"
-  }
+    "socket.io": "^1.3.5",
+    "mongojs": "^2.4.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edfullest/BankerBot.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edfullest/BankerBot/issues"
+  },
+  "homepage": "https://github.com/edfullest/BankerBot#readme"
 }
