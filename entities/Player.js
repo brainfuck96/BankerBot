@@ -9,6 +9,10 @@ var ControllerGeneralBalance = require('../controllers/ControllerGeneralBalance'
 var ControllerMyBalance = require('../controllers/ControllerMyBalance');
 var ControllerPayBank = require('../controllers/ControllerPayBank');
 var ControllerGetPaid = require('../controllers/ControllerGetPaid');
+var mongojs = require('mongojs')
+var uri = "mongodb://heroku_f21mqg65:mrqnk4n957sik8afck4lqoae02@ds137207.mlab.com:37207/heroku_f21mqg65";
+var db = mongojs(uri);
+
 function Player(){
 
     this.createNewPlayer = function (idUser, nameUser, idGameofUser){
@@ -32,7 +36,7 @@ function Player(){
     this.obtainCurrentGame = function (idUser, name, message){
 
         this.db = DBConnection.GetDB();
-        this.jugador = this.db.collection('jugador');
+        this.jugador = db.collection('jugador');
 
 
         this.jugador.findOne({ _id: idUser }, { idGame:true,balance: true }, function (err, item) {

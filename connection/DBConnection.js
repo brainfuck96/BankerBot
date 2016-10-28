@@ -1,38 +1,32 @@
 //Connection Singleton
 
-var Db = require('mongodb').Db;
+var mongodb = require('mongodb');
 var Server = require('mongodb').Server;
+var mongojs = require('mongojs')
 var dbPort = 27017;
 var dbHost = 'localhost';
 var dbName = 'monopolydb';
-
+var uri = "mongodb://heroku_f21mqg65:mrqnk4n957sik8afck4lqoae02@ds137207.mlab.com:37207/heroku_f21mqg65";
 var DBConnection = function () {
 };
-
+var db;
 module.exports = DBConnection;
 
 DBConnection.GetDB = function () {
     if (typeof DBConnection.db === 'undefined') {
         DBConnection.InitDB();
     }
-    return DBConnection.db;
+    return db;
 }
 
 DBConnection.InitDB = function () {
-    DBConnection.db = new Db(dbName, new Server(dbHost, dbPort, {}, {}), { safe: false, auto_reconnect: true });
 
-    DBConnection.db.open(function (e, d) {
-        if (e) {
-
-        } else {
-
-        }
-    });
+  db = mongojs(uri)
 }
 
 DBConnection.Disconnect = function () {
-    if (DBConnection.db) {
-        DBConnection.db.close();
+    if (db) {
+        db.close();
     }
 }
 
