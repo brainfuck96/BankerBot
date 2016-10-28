@@ -1,1 +1,1 @@
-﻿worker: node messageManager.js
+﻿worker: node index.js
