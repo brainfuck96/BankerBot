@@ -7,6 +7,10 @@
     "name": "Lalo Serna",
     "email": ""
   },
+  "main": "messageManager.js",
+ "scripts": {
+   "start": "node messageManager.js"
+  },
   "dependencies": {
     "async": "^1.2.1",
     "mongodb": "^2.0.35",
