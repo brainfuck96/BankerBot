@@ -34,7 +34,7 @@ function Game() {
     }
 
     this.searchGame = function (idGame, idUser, completeName, message) {
-
+        this.db = DBConnection.GetDB();
         this.juego = this.db.collection('juego');
 
         var controllerGame = new ControllerJoinGame();
